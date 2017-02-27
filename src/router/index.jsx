@@ -1,13 +1,27 @@
 import {Router, Route, hashHistory,IndexRedirect} from 'react-router';
 import React, {Component} from 'react';
-import App from '../component/app'//主页面
-import Home from 'component/home/index'
-import Tab from 'component/tab/index'
-import About from 'component/about/index'
-/*import Home from 'bundle?lazy!component/home/index'
-import Tab from 'bundle?lazy!component/tab/index'
-import About from 'bundle?lazy!component/about/index'*/
+import App from 'component/app'//主页面
 
+const Home = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('component/home').default)
+    },'home')
+}
+
+
+const Tab = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('component/tab').default)
+    },'tab')
+}
+
+
+
+const About = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('component/about').default)
+    },'about')
+}
 
 class RouterContent extends Component {
   render() {
@@ -15,9 +29,9 @@ class RouterContent extends Component {
         <Router history={hashHistory}>
           <Route path='/' component={App}>
             <IndexRedirect to="/home" />
-              <Route path="/home" component={Home}/>
-              <Route path="/tab" component={Tab}/>
-              <Route path="/about" component={About}/>
+              <Route path="/home" getComponent={Home}/>
+              <Route path="/tab" getComponent={Tab}/>
+              <Route path="/about" getComponent={About}/>
           </Route>
         </Router>
     )
