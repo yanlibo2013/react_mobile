@@ -75,14 +75,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
           /*  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false')),*/
-
-
-
-            // ================================
-            // 配置开发全局常量
-            // ================================
             __DEV__: env === 'development',
-            __PROD__: env === 'production',
             __COMPONENT_DEVTOOLS__: false, // 是否使用组件形式的 Redux DevTools
         }),
         ...config.plugins

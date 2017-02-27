@@ -1,6 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import {connect} from 'react-redux';
-/*import {NavBar, Icon,ActivityIndicator} from 'antd-mobile';*/
+
+import './app.less'
 class App extends Component {
     static propTypes = {
         children: PropTypes.element

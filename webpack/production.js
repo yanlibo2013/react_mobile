@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
+const env = process.env.NODE_ENV.trim(); // 当前环境
 
 module.exports = {
   entry: [
@@ -62,6 +63,11 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin('[name].css'),
+    new webpack.DefinePlugin({
+      /*  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false')),*/
+      __DEV__: env === 'development',
+      __COMPONENT_DEVTOOLS__: false, // 是否使用组件形式的 Redux DevTools
+    }),
     ...config.plugins
   ],
   resolve: config.resolve

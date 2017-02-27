@@ -39,7 +39,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-1": "^6.5.0",
     "better-npm-run": "0.0.9",
-    "bundle-loader": "^0.5.4",
+    "bundle-loader": "^0.5.5",
     "css-loader": "^0.23.1",
     "cssnano": "^3.7.5",
     "eslint": "^3.1.1",
@@ -76,7 +76,10 @@
     "axios": "^0.13.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "es-module-loader": "^2.1.2",
     "fbjs": "^0.8.3",
+    "flex.css": "^1.1.6",
     "history": "^3.0.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
@@ -85,6 +88,7 @@
     "rc-form": "^1.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-fastclick": "^3.0.1",
     "react-lite": "^0.15.14",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.0",
@@ -95,6 +99,7 @@
     "redux-promise-middleware": "^3.3.2",
     "redux-thunk": "^2.1.0",
     "reqwest": "^2.0.5",
+    "systemjs": "^0.20.9",
     "type-to-reducer": "^1.0.1"
   }
 }

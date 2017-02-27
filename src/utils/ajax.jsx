@@ -1,6 +1,6 @@
 import reqwest from 'reqwest';
 
-class Util{
+class Fetch{
     ajax(params,callback){
         /**
          * @url 请求地址(必填)
@@ -27,6 +27,6 @@ class Util{
     }
 }
 
-const util = new Util();
+const fetch = new Fetch();
 
-export default util;
+export default fetch;
