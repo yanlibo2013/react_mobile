@@ -16,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <div className="home">
-                <h1>henry 2017!</h1>
+                <h1>henry 2017!!!!!!</h1>
             </div>
         )
     }
