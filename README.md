@@ -1,4 +1,3 @@
-# 国美金融 黄金钱包项目
 
 ***
 ## <a name="architecture">&sect; 项目架构</a>
